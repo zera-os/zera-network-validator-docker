@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  validator-node:
+    image: ghcr.io/zera-os/zera-validator:latest
+    container_name: zera-node
+    volumes:
+      - ./data:/data
+    command: ["zera-validator"]
+    ports:
+      - "50051:50051"
+      - "50052:50052"
+      - "50053:50053"
